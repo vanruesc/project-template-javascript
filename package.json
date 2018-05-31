@@ -5,6 +5,7 @@
 	"homepage": "https://github.com/username/placeholder",
 	"main": "build/placeholder.js",
 	"module": "src/index.js",
+	"sideEffects": false,
 	"license": "Zlib",
 
 	"keywords": [],
