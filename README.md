@@ -27,4 +27,4 @@ npm install placeholder
 
 ## Contributing
 
-Please refer to the [contribution guidelines](https://github.com/username/placeholder/blob/master/CONTRIBUTING.md) for details.
+Please refer to the [contribution guidelines](https://github.com/username/placeholder/blob/master/.github/CONTRIBUTING.md) for details.
