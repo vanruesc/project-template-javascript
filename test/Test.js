@@ -1,15 +1,7 @@
-"use strict";
+import test from "ava";
 
-module.exports = {
+test("works", t => {
 
-	"Test": {
+	t.pass();
 
-		"can run": function(test) {
-
-			test.done();
-
-		}
-
-	}
-
-};
+});

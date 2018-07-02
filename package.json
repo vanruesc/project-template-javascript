@@ -1,7 +1,7 @@
 {
 	"name": "placeholder",
 	"version": "0.0.0",
-	"description": "",
+	"description": "placeholder",
 	"homepage": "https://github.com/username/placeholder",
 	"main": "build/placeholder.js",
 	"module": "src/index.js",
@@ -30,9 +30,15 @@
 	],
 
 	"scripts": {
-		"test": "grunt --production",
-		"prepack": "grunt prepublish",
-		"postpack": "grunt postpublish"
+		"lint": "npm run lint:lib && npm run lint:test",
+		"lint:config": "eslint *.js",
+		"lint:lib": "eslint src",
+		"lint:test": "eslint test",
+		"build": "rollup -c",
+		"build:production": "cross-env NODE_ENV=production rollup -c",
+		"doc": "esdoc",
+		"test": "ava",
+		"prepack": "npm run lint && npm run build:production"
 	},
 
 	"engines": {
@@ -40,29 +46,28 @@
 		"npm": ">=5.0.0"
 	},
 
+	"ava": {
+		"failFast": true,
+		"files": ["test/**/*.js"]
+	},
+
 	"eslintConfig": {
 		"extends": "delta"
 	},
 
-	"dependencies": {},
-
 	"devDependencies": {
-		"@vanruesc/grunt-esdoc": "0.x.x",
+		"ava": "0.x.x",
 		"babel-core": "6.x.x",
 		"babel-plugin-external-helpers": "6.x.x",
 		"babel-preset-env": "1.x.x",
+		"cross-env": "5.x.x",
+		"esdoc": "1.x.x",
 		"esdoc-standard-plugin": "1.x.x",
+		"eslint": "5.x.x",
 		"eslint-config-delta": "0.x.x",
-		"grunt": "1.x.x",
-		"grunt-cli": "1.x.x",
-		"grunt-contrib-nodeunit": "2.x.x",
-		"grunt-contrib-uglify": "3.x.x",
-		"grunt-eslint": "20.x.x",
-		"grunt-rollup": "9.x.x",
-		"jit-grunt": "0.x.x",
-		"load-grunt-config": "0.x.x",
+		"rollup": "0.x.x",
 		"rollup-plugin-babel": "3.x.x",
-		"rollup-plugin-node-resolve": "3.x.x",
-		"time-grunt": "1.x.x"
+		"rollup-plugin-babel-minify": "5.x.x",
+		"rollup-plugin-node-resolve": "3.x.x"
 	}
 }

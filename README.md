@@ -1,6 +1,6 @@
 # Project Template: JavaScript
 
-[![Build status](https://travis-ci.org/username/placeholder.svg?branch=master)](https://travis-ci.org/username/placeholder)
+[![Build status](https://travis-ci.org/vanruesc/project-template-javascript.svg?branch=master)](https://travis-ci.org/vanruesc/project-template-javascript)
 [![NPM version](https://badge.fury.io/js/_placeholder.svg)](http://badge.fury.io/js/_placeholder)
 [![Dependencies](https://david-dm.org/vanruesc/project-template-javascript.svg?branch=master)](https://david-dm.org/vanruesc/project-template-javascript)
 
